@@ -1,7 +1,15 @@
-import React from 'react'
+import React from "react";
+import { supabaseServerClient } from "../lib/initSupabase";
+import { Car } from "../lib/types";
+import CarsList from "./CarsList";
 
-export default function CarsPage() {
+export default async function CarsPage() {
+  const { data, error } = await supabaseServerClient.from("cars").select("*");
+  const cars = data as Car[];
+  console.log("Cars: ", cars);
   return (
-    <div>Car Page</div>
-  )
+    <div>
+      <CarsList cars={cars} />
+    </div>
+  );
 }
