@@ -52,5 +52,5 @@ export const handleLogout = async () => {
   const supabase = createRouteHandlerClient({ cookies: () => cookieStore });
   const { error } = await supabase.auth.signOut();
   await supabase.auth.refreshSession();
-  redirect("/");
+  redirect("/login");
 };
