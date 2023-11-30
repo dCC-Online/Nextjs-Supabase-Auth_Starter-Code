@@ -16,6 +16,9 @@ export default async function CarsPage() {
       >
         My Garage
       </Link>
+      <h2 className="mt-2 text-center text-3xl font-extrabold text-gray-900">
+        All Cars
+      </h2>
       {/* pass the cars fetched from our database into the CarsList component for display */}
       <div className="w-full max-w-4xl px-4">
         <CarsList cars={cars} />
