@@ -10,11 +10,13 @@ export default async function CarsPage() {
   console.log("All Cars: ", cars);
   return (
     <div className="flex flex-col items-center justify-center w-full">
-
-      <Link href="/cars/garage" className="my-4 text-lg text-indigo-600 hover:text-indigo-500">
-          My Garage
+      <Link
+        href="/cars/garage"
+        className="my-4 text-lg text-indigo-600 hover:text-indigo-500"
+      >
+        My Garage
       </Link>
-
+      {/* pass the cars fetched from our database into the CarsList component for display */}
       <div className="w-full max-w-4xl px-4">
         <CarsList cars={cars} />
       </div>
