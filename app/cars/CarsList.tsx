@@ -9,7 +9,7 @@ export default function CarsList({ cars }: CarsListProps) {
   return (
     <div className="mt-10 flex flex-col items-center justify-center">
       {cars.map((car) => (
-        <div key={car.id} className="mb-4 w-full max-w-md bg-white rounded-lg shadow-md p-6 space-y-2">
+        <div key={car.id} className="mb-4 w-full max-w-xl bg-white rounded-lg shadow-md p-6 space-y-2">
           <div className="flex items-center space-x-3">
             <FaCar className="text-indigo-600 h-6 w-6" />
             <h3 className="text-lg text-gray-900 font-semibold">{car.make} {car.model}</h3>

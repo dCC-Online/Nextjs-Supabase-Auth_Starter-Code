@@ -36,12 +36,15 @@ export const handleRegister = async (formData: FormData) => {
   if (!email || !password) {
     return;
   }
+
   const cookieStore = cookies();
   const supabase = createRouteHandlerClient({ cookies: () => cookieStore });
+
   const { data, error } = await supabase.auth.signUp({
     email: email,
     password: password,
   });
+  
   await supabaseServerClient.auth.refreshSession();
   redirect("/");
 };
