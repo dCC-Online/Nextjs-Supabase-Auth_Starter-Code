@@ -1,5 +1,4 @@
 import { supabaseServerClient } from "@/app/lib/initSupabase";
-import { Car } from "@/app/lib/types";
 import React from "react";
 import CarsList from "../CarsList";
 import Link from "next/link";
