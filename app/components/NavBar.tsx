@@ -23,14 +23,14 @@ export default async function Navbar() {
             <div className="hidden sm:block sm:ml-6">
               <div className="flex space-x-4">
                 {/* Navigation Links */}
-                {/* Add more <Link> elements here for additional navigation */}
+                {/* Add more <Link> elements here for additional navigation for both Authed & Unauthed users*/}
               </div>
             </div>
           </div>
           <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-            {/* Authentication Links */}
             {!user ? (
               <>
+                {/* If there is no user logged in, Display routes to the login and registration page */}
                 <Link
                   className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                   href="/login"
@@ -46,6 +46,7 @@ export default async function Navbar() {
               </>
             ) : (
               <>
+                {/* Show these links if there is a logged in user */}
                 <Link
                   className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
                   href="/cars"
