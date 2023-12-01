@@ -5,6 +5,7 @@ import CarsList from "../CarsList";
 import Link from "next/link";
 
 export default async function GaragePage() {
+  // Get the cars in the garage of the user making the request
   const { data, error } = await supabaseServerClient
     .from("garage")
     .select("car(id,make,model,year)");
