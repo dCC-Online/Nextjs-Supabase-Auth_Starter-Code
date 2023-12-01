@@ -27,5 +27,5 @@ export async function middleware(req: NextRequest) {
 
 export const config = {
   // list all the pages you want protected here
-  matcher: ['/', '/cars'],
+  matcher: ['/', '/cars', '/cars/garage'],
 };
